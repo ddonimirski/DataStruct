@@ -1,0 +1,7 @@
+#!/bin/bash
+# ls | cut  -d "." -f -2
+for i in $(ls -d tests/* | grep -v \\.); do
+    left=`cat ${i} |./a.out`;
+    right=`cat ${i}.a`;
+    echo ${i} 
+done
